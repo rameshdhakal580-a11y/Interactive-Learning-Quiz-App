@@ -1,0 +1,112 @@
+body {
+  margin:0;
+  font-family:Poppins;
+  text-align:center;
+}
+
+#hero {
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(135deg,#d0f4de,#fce1e4,#ede7f6,#e0f7fa);
+}
+
+.hero-content h1 {font-size:3rem;}
+.hero-content p {font-size:1.2rem;}
+
+.category-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+
+.category-btn {
+  padding:20px;
+  border-radius:15px;
+  cursor:pointer;
+  background:white;
+}
+
+#quiz-container {
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.science-bg {background:#e0f7fa;}
+.maths-bg {background:#fff3e0;}
+.english-bg {background:#f3e5f5;}
+.gk-bg {background:#e8f5e9;}
+
+#question-text {font-size:2rem;}
+
+.option-btn {
+  margin:10px;
+  padding:15px;
+  width:250px;
+  border-radius:10px;
+}
+
+.correct {background:green;color:white;}
+.wrong {background:red;color:white;}
+
+#progress-container {
+  width:80%;
+  height:10px;
+  background:#ddd;
+}
+#progress-bar {
+  height:100%;
+  background:orange;
+  width:0%;
+}
+
+.game-controls {
+  position:fixed;
+  bottom:20px;
+  display:flex;
+  gap:20px;
+}
+
+.game-controls button {
+  padding:15px;
+  border-radius:50%;
+  border:none;
+  font-size:18px;
+}
+
+#completion-screen {
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+}
+
+#music-toggle, #install-btn {
+  position: fixed;
+  top: 10px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+#music-toggle { right: 10px; background: #ff9800; color: white; }
+#install-btn { right: 80px; background: #4caf50; color: white; }
+
+#music-toggle:hover, #install-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+#music-toggle .music-text, #install-btn .install-text { font-weight: bold; }
