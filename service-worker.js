@@ -9,7 +9,7 @@ self.addEventListener("install",e=>{
         "./style.css",
         "./script.js",
         "./questions.js",
-        "./manifest.json"
+        "./logo.png"
       ]);
     })
   );
