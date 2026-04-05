@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Learning Quiz</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#8fd3f4">
+</head>
+
+<body>
+
+<audio id="bg-music" loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3" type="audio/mp3">
+</audio>
+
+<button id="music-toggle"><span class="music-text">ON</span> 🔊</button>
+<button id="install-btn"><span class="install-text">Install</span> 📲</button>
+
+<section id="hero">
+  <div class="hero-content">
+    <h1>🌟 Interactive Learning Quiz 🌟</h1>
+    <p>Play • Learn • Grow 🚀</p>
+
+    <div id="lang-switch">
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('np')">नेपाली</button>
+    </div>
+
+    <div class="category-grid">
+      <button class="category-btn" data-category="science">🔬 Science</button>
+      <button class="category-btn" data-category="maths">➗ Maths</button>
+      <button class="category-btn" data-category="english">📖 English</button>
+      <button class="category-btn" data-category="gk">🌎 GK</button>
+    </div>
+  </div>
+</section>
+
+<section id="quiz-container" style="display:none;">
+  <h2 id="question-text"></h2>
+
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+
+  <div id="options"></div>
+
+  <p>Score: <span id="score">0</span></p>
+
+  <div class="game-controls">
+    <button id="back-btn">⬅️</button>
+    <button id="next-btn">➡️</button>
+    <button id="home-btn">🏠</button>
+  </div>
+</section>
+
+<section id="completion-screen" style="display:none;">
+  <h2>🎉 Completed 🎉</h2>
+  <p id="final-score"></p>
+  <button onclick="location.reload()">Play Again</button>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script src="questions.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
